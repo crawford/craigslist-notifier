@@ -72,6 +72,9 @@ client.get(key, function(err, res){
 
 		client.set(key, JSON.stringify(json));
 		logger.infoCyan('scrape', 'Found ' + numNewListings.length + ' new listings');
-		process.exit();
+		setTimeout(function(){
+			process.exit();
+		}, 5000);
+		
 	});
 });
